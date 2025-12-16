@@ -80,7 +80,7 @@ Current configuration environment variables:
 version: '2'
 services:
   circled-server:
-    image: circled-server:latest
+    image: feelingfrance/circled-server-t:latest
     restart: unless-stopped
     ports:
       - "18288:8080"

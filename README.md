@@ -1,4 +1,7 @@
 #同步安卓和苹果手机照片的自建服务端，因为openstreet国内不支持，修改代码，改用高德地图的，API请自己申请(免费).
+
+docker pull feelingfrance/circled-server-t:latest,要用代理的，请用 docker.1ms.run/feelingfrance/circled-server-t:latest
+
 如有疑问请提issue
 # Circled.me Community Server
 This project aims to help people easily backup and share photos, videos, albums on their own server and to enable communication, including audio/video calls and chats. And do all this by keeping everything private. Focusing on performance, low footprint and ease of implementation and use. The application is not dependant on any other service if you use the default SQLite DB engine.

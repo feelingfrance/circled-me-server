@@ -97,12 +97,13 @@ Current configuration environment variables:
 version: '2'
 services:
   circled-server:
-    image: gubble/circled-server:latest
-    restart: always
+    image: circled-server:latest
+    restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "18288:8080"
     environment:
       SQLITE_FILE: "/mnt/data1/circled.db"
+      GAODE_API_KEY: "填写你申请的高德APIkey"
       BIND_ADDRESS: "0.0.0.0:8080"
       DEFAULT_BUCKET_DIR: "/mnt/data1"
       DEFAULT_ASSET_PATH_PATTERN: "<year>/<month>/<id>"

@@ -1,22 +1,5 @@
 #同步安卓和苹果手机照片的自建服务端，因为openstreet国内不支持，修改代码，改用高德地图的，API请自己申请(免费).
 
-version: '2'
-services:
-  circled-server:
-    image: circled-server:latest
-    restart: unless-stopped
-    ports:
-      - "18288:8080"
-    environment:
-      SQLITE_FILE: "/mnt/data1/circled.db"
-      GAODE_API_KEY: "填写你申请的高德APIkey"
-      BIND_ADDRESS: "0.0.0.0:8080"
-      DEFAULT_BUCKET_DIR: "/mnt/data1"
-      DEFAULT_ASSET_PATH_PATTERN: "<year>/<month>/<id>"
-    volumes:
-      - ./circled-data:/mnt/data1
-
-
 docker pull feelingfrance/circled-server-t:latest,要用代理的，请用 docker.1ms.run/feelingfrance/circled-server-t:latest
 
 
